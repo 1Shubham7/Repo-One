@@ -1,0 +1,8 @@
+h1{
+  color: green ;
+  border : 4px solid black;
+}
+
+table, th, td{
+  border : 2px solid green;
+}

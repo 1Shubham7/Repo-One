@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DJANGO</title>
+    <link rel="stylesheet" href="{% static "css/one.css" %}"/>
+  </head>
+  <body>
+    <h1>HI WELCOME TO DJANGO</h1>
+    <h2>HERE ARE YOUR ACCESS RECORDS</h2>
+
+    <div class="djangotwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+          {% for x in access_records %}
+            <tr>
+              <td>{{ x.name }}</td>
+              <td>{{ x.date }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+
+        {% else %}
+          <p>THERE IS NO ACCESS RECORDS</p>
+        {% endif %}
+
+    </div>
+  </body>
+</html>
